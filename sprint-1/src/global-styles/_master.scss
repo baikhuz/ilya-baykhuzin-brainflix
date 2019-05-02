@@ -1,20 +1,19 @@
 // contains global variables, fonts and mixins
 
-// VVV default fonts are here VVV
+// VVV default fonts are here, links are written to reference fonts from the locations of components scss files VVV
 
-// @font-face {
-//     font-family: 'AvenirNextProLT';
-//     src:    url('../assets/fonts/AvenirNextProLT/AvenirNextLTPro-Regular.otf') format('opentype'),
-//             url('../assets/fonts/AvenirNextProLT/Alternative-files/Avenir-Next-LT-Pro.ttf') format('truetype');
-// }
-// @font-face {
-//     font-family: 'AvenirNextProLT-demi';
-//     src:    url('../assets/fonts/AvenirNextProLT/AvenirNextLTPro-Demi.otf') format('opentype'),
-//             url('../assets/fonts/AvenirNextProLT/Alternative-files/Avenir-Next-LT-Pro-Demi.ttf') format('truetype');
-// }
-// @font-face {
-//     font-family: 'AvenirNextProLT-bold';
-//     src:    url('../assets/fonts/AvenirNextProLT/AvenirNextLTPro-Bold.otf') format('opentype'),
-//             url('../assets/fonts/AvenirNextProLT/Alternative-files/Avenir-Next-LT-Pro-Bold.ttf') format('truetype');
-// }
-
+@font-face {
+    font-family: 'AvenirNextProLT';
+    src:    url('../../assets/fonts/AvenirNextLTPro-Regular.otf') format('opentype'),
+            url('../../assets/fonts/alternative-files/AvenirNextLTPro.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'AvenirNextProLT-demi';
+    src:    url('../../assets/fonts/AvenirNextLTPro-Demi.otf') format('opentype'),
+            url('../../assets/fonts/alternative-files/AvenirNextLTPro-Demi.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'AvenirNextProLT-bold';
+    src:    url('../../assets/fonts/AvenirNextLTPro-Bold.otf') format('opentype'),
+            url('../../assets/fonts/alternative-files/AvenirNextLTPro-Bold.ttf') format('truetype');
+}

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import logo from '../../assets/Logo/Logo-brainflix.svg';
-import './Header.scss';
+import logo from '../assets/Logo/Logo-brainflix.svg';
 
 
 class Header extends Component {
