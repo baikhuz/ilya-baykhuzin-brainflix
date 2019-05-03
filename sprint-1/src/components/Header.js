@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import logo from '../assets/Logo/Logo-brainflix.svg';
+import '../styles/header.scss';
+import plusIcon from '../assets/Icons/SVG/Icon-upload.svg';
 
 
 class Header extends Component {
@@ -19,7 +21,9 @@ class Header extends Component {
                     <input className = "header__searchbar--input" type = "text" placeholder="Search"/>
                 </form>
                 <div className="header__upload">
-                    <button className="header__upload--button" type = "button"></button>
+                    <button className="header__upload--button" type = "button">
+                    <img src={plusIcon} alt="upload"/><span> upload</span>
+                    </button>
                     <div className="user-avatar header__upload--user-avatar"></div>
                 </div>
             </header>

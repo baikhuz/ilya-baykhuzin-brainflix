@@ -1,0 +1,164 @@
+// COLORS
+
+$color-black: #323232;
+$color-brainflix-blue: #0095FF;
+$color-white: #FFF;
+$color-silver: #AFAFAF;
+$color-brainflix-blue-dark: #0065AD;
+$color-mercury: #E1E1E1;
+$color-alabaster: #FAFAFA;
+
+
+// SCREEN SIZES
+
+@mixin tablet {
+    @media (min-width: 48rem) {
+        @content
+    }
+}
+
+@mixin mid-desktop {
+    @media (min-width: 48.0625rem) {
+        @content
+    }
+}
+
+@mixin desktop {
+    @media (min-width: 90rem) {
+        @content
+
+    }
+}
+
+
+// FONTS
+
+@font-face {
+    font-family: 'AvenirNextProLT';
+    src:    url('./fonts/AvenirNextLTPro-Regular.otf') format('opentype'),
+            url('./fonts/alternative-files/AvenirNextLTPro.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'AvenirNextProLT-demi';
+    src:    url('./fonts/AvenirNextLTPro-Demi.otf') format('opentype'),
+            url('./fonts/alternative-files/AvenirNextLTPro-Demi.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'AvenirNextProLT-bold';
+    src:    url('./fonts/AvenirNextLTPro-Bold.otf') format('opentype'),
+            url('./fonts/alternative-files/AvenirNextLTPro-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('https://fonts.googleapis.com/css?family=Roboto');
+}
+
+@font-face {
+    font-family: 'Roboto-demi';
+    src: url('https://fonts.googleapis.com/css?family=Roboto:500');
+}
+
+@font-face {
+    font-family: 'Roboto-bold';
+    src: url('https://fonts.googleapis.com/css?family=Roboto:700');
+}
+
+$font-stack: 'AvenirNextProLT', 'Roboto';
+$font-stack-demi: 'AvenirNextProLT-demi', 'Roboto-demi';
+$font-stack-bold: 'AvenirNextProLT-bold', 'Roboto-bold';
+
+@mixin hero-header {
+    font-family: $font-stack-bold;
+    font-size: 3.75rem;
+    line-height: 4.25rem;
+}
+
+@mixin h1-header {
+    font-family: $font-stack-bold;
+    font-size: 1.5rem;
+    line-height: 2rem;
+
+    @include tablet {
+        font-size: 2.25rem;
+        line-height: 2.75rem;
+    }
+}
+
+@mixin h2-header {
+    @include tablet {
+        font-family: $font-stack-bold;
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+}
+
+@mixin h2-subheader {
+    font-family: $font-stack-demi;
+    font-size: 14px;
+    line-height: 1.375rem;
+}
+
+@mixin h3-subheader {
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+@mixin para {
+    font-size: 13px;
+    line-height: 1.125rem;
+
+    @include tablet {
+        font-size: 14px;
+        line-height: 1.375rem;
+    }
+}
+
+@mixin list-contact {
+    font-size: 13px;
+    line-height: 1.125rem;
+
+    @include tablet {
+        font-size: 14px;
+        line-height: 1.25rem;
+    }
+}
+
+@mixin label {
+    font-family: $font-stack-demi;
+    font-size: 12px;
+    line-height: 1.25rem;
+}
+
+body {
+    font-family: $font-stack;
+    color: $color-black;
+}
+
+
+// PADDING
+
+@mixin padding-sides {
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+        @include tablet {
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+        }
+
+        @include desktop {
+            padding-left: 11.25rem;
+            padding-right: 11.25rem;
+        }
+}
+
+@mixin user-avatar {
+    height: 3rem;
+    width: 3rem;
+    border: 0;
+    border-radius: 50%;
+    background: url('../assets/Images/Mohan-muruge.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
