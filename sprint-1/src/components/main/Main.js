@@ -7,8 +7,8 @@ class Main extends Component {
     render () {
         return (
             <>
-                <MainVideo></MainVideo>
-                <SideVids></SideVids>
+                <MainVideo/>
+                <SideVids/>
             </>
         );
     }

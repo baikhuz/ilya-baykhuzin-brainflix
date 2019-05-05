@@ -85,6 +85,10 @@ $font-stack-bold: 'AvenirNextProLT-bold', 'Roboto-bold';
     }
 }
 
+.h1-header {
+    @include h1-header;
+}
+
 @mixin h2-header {
     @include tablet {
         font-family: $font-stack-bold;
@@ -93,15 +97,27 @@ $font-stack-bold: 'AvenirNextProLT-bold', 'Roboto-bold';
     }
 }
 
+.h2-header {
+    @include h2-header;
+}
+
 @mixin h2-subheader {
     font-family: $font-stack-demi;
     font-size: 14px;
     line-height: 1.375rem;
 }
 
+.h2-subheader {
+    @include h2-subheader;
+}
+
 @mixin h3-subheader {
     font-size: 1rem;
     line-height: 1.5rem;
+}
+
+.h3-subheader {
+    @include h3-subheader;
 }
 
 @mixin para {
@@ -114,6 +130,10 @@ $font-stack-bold: 'AvenirNextProLT-bold', 'Roboto-bold';
     }
 }
 
+.para {
+    @include para;
+}
+
 @mixin list-contact {
     font-size: 13px;
     line-height: 1.125rem;
@@ -124,17 +144,25 @@ $font-stack-bold: 'AvenirNextProLT-bold', 'Roboto-bold';
     }
 }
 
+.list-contact {
+    @include list-contact;
+}
+
 @mixin label {
     font-family: $font-stack-demi;
+    color: $color-silver;
     font-size: 12px;
     line-height: 1.25rem;
+}
+
+.label {
+    @include label;
 }
 
 body {
     font-family: $font-stack;
     color: $color-black;
 }
-
 
 // PADDING
 
@@ -153,6 +181,10 @@ body {
         }
 }
 
+.padding-sides {
+    @include padding-sides;
+}
+
 @mixin user-avatar {
     height: 3rem;
     width: 3rem;
@@ -161,4 +193,17 @@ body {
     background: url('../assets/Images/Mohan-muruge.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.divider-line {
+    border-bottom: 1px solid $color-mercury;
+    margin: 0 1rem;
+
+    @include tablet {
+        margin: 0 1.5rem;
+    }
+
+    @include desktop {
+        margin: 0 11.25rem;
+    }
 }

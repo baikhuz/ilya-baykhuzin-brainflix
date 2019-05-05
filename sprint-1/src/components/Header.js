@@ -12,7 +12,7 @@ class Header extends Component {
 
     render () {
         return (
-            <header className = "header">
+            <header className = "header padding-sides">
                 <div className = "header__logo--container">
                     <img className = "logo" src={logo} alt="Brainflix Logo"/>
                 </div>
@@ -21,7 +21,7 @@ class Header extends Component {
                     <input className = "header__searchbar--input" type = "text" placeholder="Search"/>
                 </form>
                 <div className="header__upload">
-                    <button className="header__upload--button" type = "button">
+                    <button className="header__upload--button h2-subheader" type = "button">
                     <img src={plusIcon} alt="upload"/><span> upload</span>
                     </button>
                     <div className="user-avatar header__upload--user-avatar"></div>
