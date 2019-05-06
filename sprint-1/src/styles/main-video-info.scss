@@ -1,0 +1,68 @@
+@import './master';
+
+.video-info {
+
+    &__head {
+        margin: 1rem 0 0 0;
+    }
+
+    &__container {
+        padding-top: 1rem;
+    }
+
+    &__general-info-container {
+        @include tablet {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    &__channel-date {
+        display: flex;
+        align-items: center;
+
+        & > h2 {
+            margin: 0 8px 0 0;
+        }
+
+        & > h5 {
+            color: $color-silver;
+        }
+    }
+
+    &__view-likes {
+        display: flex;
+        margin-bottom: 8px;
+
+        @include tablet {
+            margin-bottom: 0;
+        }
+
+        &--views {
+            display: flex;
+            margin-right: 1.5rem;
+
+            &--icon {
+                padding-right: 8px;
+            }
+        }
+
+        &--likes {
+            display: flex;
+
+            &--icon {
+                padding-right: 8px;
+            }
+        }
+    }
+
+    &__description {
+        padding-top: 1.5rem;
+
+        @include tablet {
+            padding-top: 2.5rem;
+            width: 37.25rem;
+        }
+    }
+}

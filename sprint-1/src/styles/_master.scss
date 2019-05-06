@@ -23,6 +23,12 @@ $color-alabaster: #FAFAFA;
     }
 }
 
+@mixin laptop-small {
+    @media (min-width: 64rem) {
+        @content
+    }
+}
+
 @mixin desktop {
     @media (min-width: 90rem) {
         @content
@@ -153,6 +159,7 @@ $font-stack-bold: 'AvenirNextProLT-bold', 'Roboto-bold';
     color: $color-silver;
     font-size: 12px;
     line-height: 1.25rem;
+    text-transform: uppercase;
 }
 
 .label {
@@ -205,5 +212,47 @@ body {
 
     @include desktop {
         margin: 0 11.25rem;
+    }
+}
+
+.content-container {
+
+    @include desktop {
+        display: flex;
+
+        padding-left: 0;
+    }
+}
+
+.video-info {
+
+    &__container, &__description {        
+        @include desktop {
+            padding-right: 2rem;
+        }
+    }
+}
+
+.comment {
+    @include desktop {
+        padding-right: 2rem;
+    }
+
+    &-form__wrapper {
+        @include desktop {
+            padding-right: 2rem;
+        }
+    }
+}
+
+#line-comments-section {
+    @include desktop {
+        margin-right: 2rem;
+    }
+}
+
+.main-video-divider {
+    @include desktop {
+        margin-right: 2rem;
     }
 }

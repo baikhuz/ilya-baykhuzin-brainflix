@@ -1,12 +1,12 @@
-import React, { Component } from 'react';
+// import React, { Component } from 'react';
 
-class SideVid extends Component {
-    render () {
-        return (
-            <>
+// class SideVid extends Component {
+//     render () {
+//         return (
+//             <>
 
-            </>
-        );
-    }
-}
-export default SideVid;
+//             </>
+//         );
+//     }
+// }
+// export default SideVid;

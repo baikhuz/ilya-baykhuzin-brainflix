@@ -7,8 +7,12 @@ class MainVideoComments extends Component {
     render () {
         return (
             <>
-                <CommentForm></CommentForm>
-                <CommentList></CommentList>
+                <CommentForm
+                    comments = {this.props.comments}    
+                />
+                <CommentList
+                    comments = {this.props.comments}
+                />
             </>
         );
     }

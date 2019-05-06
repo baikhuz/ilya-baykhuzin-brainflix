@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import videodata from '../../../assets/Video/videodata.js';
 import VideoPlayer from './VideoPlayer';
 import MainVideoInfo from './MainVideoInfo';
-import MainVideoComments from './main-video-comments/MainVideoComments';
 
 class MainVideo extends Component {
 
@@ -14,9 +13,12 @@ class MainVideo extends Component {
         timestamp: videodata.mainVid.timestamp,
         views: videodata.mainVid.views,
         likes: videodata.mainVid.likes,
-        description: videodata.mainVid.description
+        description: videodata.mainVid.description,
+        comments: videodata.mainVid.comments,
+        sideVids: videodata.allVids
     }
 
+    
     render () {
         return (
             <>
@@ -31,8 +33,9 @@ class MainVideo extends Component {
                     views = {this.state.views}
                     likes = {this.state.likes}
                     description = {this.state.description}
+                    comments = {this.state.comments}
+                    sideVids = {this.state.sideVids}
                 />
-                <MainVideoComments/>
             </>
         );
     }
