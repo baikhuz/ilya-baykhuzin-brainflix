@@ -17,12 +17,10 @@ class App extends React.Component {
 
   // state = get request all vids
   componentDidMount() {
-    console.log('component mounted');
       axios
         .get(`${apiLinkVids}${apiKey}`)
         .then(request => {
           this.setState(request.data);
-          console.log(this.state);
         })
         .catch(error => {console.log(error)});
         return;
@@ -31,7 +29,6 @@ class App extends React.Component {
   
 
   render () {
-    console.log(this.state);
     return (
       <>
       <BrowserRouter>
@@ -40,11 +37,8 @@ class App extends React.Component {
             <Route exact path = '/' render = {props => (
               <Videos {...props} videos = {this.state} />
             )} />
-            {/* <Route /> */}
-            {/* <Route component = {NoMatch} /> */}
           </Switch>
       </BrowserRouter>
-      {/* <Videos videos = {this.state} /> */}
       </>
     )
   }

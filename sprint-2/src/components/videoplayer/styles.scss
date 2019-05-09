@@ -1,0 +1,22 @@
+@import '../../styles/master';
+
+.main-video {
+    width: 100%;
+    height: 100%;
+
+    @include tablet {
+        height: 25rem;
+    }
+
+    @include desktop {
+        height: 33.75rem;
+        width: 59rem;
+    }
+    
+    &__container {
+        display: flex;
+        justify-content: center;
+        width: 100vw;
+        background: #000;
+    }
+}
