@@ -1,0 +1,101 @@
+@import './fonts';
+@import './mixins';
+@import './variables';
+
+.h1-header {
+    @include h1-header;
+}
+
+@mixin h2-header {
+    @include tablet {
+        font-family: $font-stack-bold;
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+}
+
+.h2-header {
+    @include h2-header;
+}
+
+@mixin h2-subheader {
+    font-family: $font-stack-demi;
+    font-size: 14px;
+    line-height: 1.375rem;
+}
+
+.h2-subheader {
+    @include h2-subheader;
+}
+
+@mixin h3-subheader {
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+.h3-subheader {
+    @include h3-subheader;
+}
+
+@mixin para {
+    font-size: 13px;
+    line-height: 1.125rem;
+
+    @include tablet {
+        font-size: 14px;
+        line-height: 1.375rem;
+    }
+}
+
+.para {
+    @include para;
+}
+
+@mixin list-contact {
+    font-size: 13px;
+    line-height: 1.125rem;
+
+    @include tablet {
+        font-size: 14px;
+        line-height: 1.25rem;
+    }
+}
+
+.list-contact {
+    @include list-contact;
+}
+
+@mixin label {
+    font-family: $font-stack-demi;
+    color: $color-silver;
+    font-size: 12px;
+    line-height: 1.25rem;
+    text-transform: uppercase;
+}
+
+.label {
+    @include label;
+}
+
+body {
+    margin: 0;
+    font-family: $font-stack;
+    color: $color-black;
+}
+
+.padding-sides {
+    @include padding-sides;
+}
+
+.divider-line {
+    border-bottom: 1px solid $color-mercury;
+    margin: 0 1rem;
+
+    @include tablet {
+        margin: 0 1.5rem;
+    }
+
+    @include desktop {
+        margin: 0 11.25rem;
+    }
+}
