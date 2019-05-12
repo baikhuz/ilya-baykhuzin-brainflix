@@ -65,13 +65,7 @@
     @include list-contact;
 }
 
-@mixin label {
-    font-family: $font-stack-demi;
-    color: $color-silver;
-    font-size: 12px;
-    line-height: 1.25rem;
-    text-transform: uppercase;
-}
+
 
 .label {
     @include label;
@@ -89,13 +83,4 @@ body {
 
 .divider-line {
     border-bottom: 1px solid $color-mercury;
-    margin: 0 1rem;
-
-    @include tablet {
-        margin: 0 1.5rem;
-    }
-
-    @include desktop {
-        margin: 0 11.25rem;
-    }
 }

@@ -7,11 +7,11 @@ class SideVids extends React.Component {
     renderSideVids = () => {
         if (this.props.videos) {
             return this.props.videos
-                .filter(item => item.id !== this.props.match.params.id)
+                .filter(item => item.id !== this.props.id)
                 .map(item => {
                     return (
                         <div key = {item.id}>
-                            <div className="side-vid">
+                            <div className="side-vid padding-sides">
                                 <Link to = {`/videos/${item.id}`}>
                                     <img className="side-vid__poster" src={item.image} alt="poster"/>
                                 </Link>

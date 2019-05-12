@@ -1,0 +1,16 @@
+@import '../../styles/master';
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.vid-info {
+
+    @include desktop {
+        display: flex;
+        flex-direction: row;
+        padding-left: 11.25rem;
+        padding-right: 11.25rem;
+    }
+}

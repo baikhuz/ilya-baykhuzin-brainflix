@@ -2,7 +2,9 @@ import React from 'react';
 import axios from 'axios';
 
 import VideoPlayer from '../../components/videoplayer';
-import SideVideos from '../../components/sidevideos';
+// import SideVideos from '../../components/sidevideos';
+
+import './styles.scss';
 
 const apiLinkVids = 'https://project-2-api.herokuapp.com/videos/';
 const apiKey = '?api_key=d768575a-1d10-4607-925b-b8fd9fc88364';
@@ -20,10 +22,12 @@ class Videos extends React.Component {
         
         render () {
             return (
-            <>
-                <VideoPlayer {...this.props} />
-                <SideVideos {...this.props} videos = {this.state.videos} />
-            </>
+            <div className="content-container">
+                <VideoPlayer {...this.props} videos = {this.state.videos} />
+                {/* <div className="sidevid-container">
+                    <SideVideos {...this.props} videos = {this.state.videos} />
+                </div> */}
+            </div>
         )
     }
 }

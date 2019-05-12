@@ -42,7 +42,7 @@ class VideoInfo extends React.Component {
         } = this.state.currentVideo
 
         return (
-            <div className="content-container padding-sides">
+            <div className="padding-sides videoinfo-container">
                 <div className="info-and-comments">
                     <div className="video-info__container padding-sides">
                         <h1 className = "video-info__head h1-header">{title}</h1>
@@ -63,7 +63,7 @@ class VideoInfo extends React.Component {
                             </div>
                         </div>
                     </div>
-                    <div className="divider-line main-video-divider"></div>
+                    <div className="divider-line"></div>
                     <div className="video-info__description padding-sides para">{description}</div>
                     <MainVideoComments comments = {comments} />
                 </div>

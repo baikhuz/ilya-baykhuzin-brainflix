@@ -8,6 +8,10 @@
         width: 21.75rem;
     }
 
+    @include desktop {
+        padding-bottom: .38rem;
+    }
+
     &__label {
         padding-top: 1.75rem;
         padding-bottom: 1.75rem;

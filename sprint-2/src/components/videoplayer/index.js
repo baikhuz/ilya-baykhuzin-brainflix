@@ -3,6 +3,7 @@ import axios from 'axios';
 
 import './styles.scss';
 import VideoInfo from '../videoinfo';
+import SideVideos from '../../components/sidevideos';
 
 import {apiLinkVids, apiKey} from '../../pages/videos';
 
@@ -29,7 +30,13 @@ class VideoPlayer extends React.Component {
                         <source src = {this.state.video + apiKey} type = "video/mp4"/>
                     </video> : null }
                 </div>
-                <VideoInfo currentVideo = {this.state} />
+
+                <div className="vid-info">
+                    <VideoInfo currentVideo = {this.state} />
+                    <div className="sidevid-container">
+                        <SideVideos id={this.props.match.params.id} videos = {this.props.videos} />
+                    </div>
+                </div>
             </>
         )
     }

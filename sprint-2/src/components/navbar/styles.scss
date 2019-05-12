@@ -14,12 +14,15 @@
 
     @include desktop {
         justify-content: flex-start;
+        margin-left: 11.25rem;
+        margin-right: 11.25rem;
     }
 
     &__logo--container {
         height: 3rem;
         display: flex;
         justify-content: center;
+        align-items: center;
 
         @include tablet {
             margin-right: 10.5625rem;

@@ -43,6 +43,14 @@
     }
 }
 
+@mixin label {
+    font-family: $font-stack-demi;
+    color: $color-silver;
+    font-size: 12px;
+    line-height: 1.25rem;
+    text-transform: uppercase;
+}
+
 @mixin padding-sides {
     padding-left: 1rem;
     padding-right: 1rem;
@@ -53,9 +61,14 @@
         }
 
         @include desktop {
-            padding-left: 11.25rem;
-            padding-right: 11.25rem;
+            padding-left: 0;
+            padding-right: 0;
         }
+}
+
+@mixin padding-desktop {
+    padding-left: 11.25rem;
+    padding-right: 11.25rem;
 }
 
 @mixin user-avatar {
@@ -66,4 +79,15 @@
     background: url('../../assets/images/Mohan-muruge.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+@mixin commenter-name {
+    font-family: $font-stack-demi;
+    font-size: 13px;
+    line-height: 1.125rem;
+
+    @include tablet {
+        font-size: 14px;
+        line-height: 1.375rem;
+    }
 }

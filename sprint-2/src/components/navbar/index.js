@@ -24,13 +24,16 @@ class Header extends React.Component {
                     <input className = "header__searchbar--input" type = "text" placeholder="Search"/>
                 </form>
                 <div className="header__upload">
-                    <button className="header__upload--button h2-subheader" type = "button">
-                    <img src={plusIcon} alt="upload"/><span> upload</span>
-                    </button>
+                    <Link to = '/upload'>
+                        <button className="header__upload--button h2-subheader" type = "button">
+                            <img src={plusIcon} alt="upload"/><span> upload</span>
+                        </button>
+                    </Link>
                     <div className="user-avatar header__upload--user-avatar"></div>
                 </div>
             </header>
         );
     }
 }
+
 export default Header;
