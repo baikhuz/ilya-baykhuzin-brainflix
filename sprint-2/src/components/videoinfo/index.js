@@ -54,7 +54,7 @@ class VideoInfo extends React.Component {
                         </div>
                     </div>
                     <div className="divider-line"></div>
-                    <div className="video-info__description padding-sides para">{description}</div>
+                    <div className="video-info__description para">{description}</div>
                     <MainVideoComments comments = {comments} />
                 </div>
             </div>
