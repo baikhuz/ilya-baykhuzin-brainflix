@@ -67,6 +67,10 @@
         justify-content: center;
         margin-top: 8px;
         margin-bottom: 1rem;
+
+        & > a {
+            text-decoration: none;
+        }
         
         @include tablet {
             width: auto;
