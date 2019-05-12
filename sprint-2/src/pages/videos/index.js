@@ -2,7 +2,6 @@ import React from 'react';
 import axios from 'axios';
 
 import VideoPlayer from '../../components/videoplayer';
-// import VideoInfo from '../../components/videoinfo';
 import SideVideos from '../../components/sidevideos';
 
 const apiLinkVids = 'https://project-2-api.herokuapp.com/videos/';
@@ -23,7 +22,6 @@ class Videos extends React.Component {
             return (
             <>
                 <VideoPlayer {...this.props} />
-                {/* <VideoInfo videos {...this.props} /> */}
                 <SideVideos {...this.props} videos = {this.state.videos} />
             </>
         )

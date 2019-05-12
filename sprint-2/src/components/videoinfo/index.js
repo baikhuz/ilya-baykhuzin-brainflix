@@ -1,7 +1,12 @@
 import React from 'react';
 import './styles.scss';
+import MainVideoComments from '../mainvideocomments';
 
 class VideoInfo extends React.Component {
+
+    state = {
+        currentVideo: {}
+    }
 
     convertTimestamp = (timestamp) => {
 
@@ -13,17 +18,28 @@ class VideoInfo extends React.Component {
         timestamp = `${mm}/${dd}/${yyyy}`;
         return timestamp;
     }
+
+    componentWillReceiveProps (newProps) {
+        if (newProps.currentVideo && Object.keys(newProps.currentVideo).length > 0)
+            this.setState({currentVideo: newProps.currentVideo})
+    }
+
+    // ^^ this conditional checks whether 
+    // (a) the .currentVideo props were received and
+    // (b) there is at least 1 key-value pair inside the props object. this prevents
+    // passing props down to children twice
     
     render () {
-        console.log('videoinfo!',this.props);
+
         const {
             channel, 
             description, 
             likes, 
             timestamp, 
             title,  
-            views 
-        } = this.props.currentVideo
+            views,
+            comments
+        } = this.state.currentVideo
 
         return (
             <div className="content-container padding-sides">
@@ -49,9 +65,7 @@ class VideoInfo extends React.Component {
                     </div>
                     <div className="divider-line main-video-divider"></div>
                     <div className="video-info__description padding-sides para">{description}</div>
-                    {/* <MainVideoComments comments={this.props.comments} /> */}
-                </div>
-                <div className="side-videos">
+                    <MainVideoComments comments = {comments} />
                 </div>
             </div>
         )
