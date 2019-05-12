@@ -2,7 +2,6 @@ import React from 'react';
 import axios from 'axios';
 
 import VideoPlayer from '../../components/videoplayer';
-// import SideVideos from '../../components/sidevideos';
 
 import './styles.scss';
 
@@ -24,9 +23,6 @@ class Videos extends React.Component {
             return (
             <div className="content-container">
                 <VideoPlayer {...this.props} videos = {this.state.videos} />
-                {/* <div className="sidevid-container">
-                    <SideVideos {...this.props} videos = {this.state.videos} />
-                </div> */}
             </div>
         )
     }

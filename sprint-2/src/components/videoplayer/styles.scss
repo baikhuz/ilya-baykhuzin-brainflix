@@ -14,9 +14,87 @@
     }
     
     &__container {
+        position: relative;
         display: flex;
         justify-content: center;
-        width: 100vw;
+        width: 100%;
         background: #000;
+    }
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    position: absolute;
+    margin: 0 auto;
+    bottom: 8px;
+    left: 1rem;
+    right: 1rem;
+    height: 2rem;
+    width: 90%;
+
+    @include tablet {
+        bottom: 1rem;
+    }
+
+    @include mid-desktop {
+        width: 43.9375rem;
+    }
+
+    @include desktop {
+        width: 63%;
+    }
+
+        &__play-pause {
+            width: 3rem;
+            @include vid-controls;
+
+            &--button {
+                background: url('../../assets/icons/SVG/Icon-play.svg');
+                @include vid-button-formats;
+            }
+        }
+
+    &__scrubber {
+        width: 75%;
+        @include vid-controls;
+
+        @include desktop {
+            width: 82%;
+        }
+
+        &--line {
+            height: 3px;
+            width: 90%;
+            background: #000;
+            border-radius: 1.5px;
+        }
+    }
+
+    &__size-volume {
+        width: 4.5rem;
+        @include vid-controls;
+        margin-right: 0;
+
+        &--size {
+            height: 100%;
+            width: 50%;
+
+            &--button {
+                background: url('../../assets/icons/SVG/Icon-fullscreen.svg');
+                @include vid-button-formats;
+            }
+        }
+
+        &--volume {
+            height: 100%;
+            width: 50%;
+
+            &--button {
+                background: url('../../assets/icons/SVG/Icon-volume.svg');
+                @include vid-button-formats;
+            }
+        }
     }
 }

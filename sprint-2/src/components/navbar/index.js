@@ -1,9 +1,10 @@
 import React from 'react';
-import logo from '../../assets/logo/Logo-brainflix.svg';
-import './styles.scss';
-import plusIcon from '../../assets/icons/SVG/Icon-upload.svg';
 import { Link } from 'react-router-dom';
 
+import logo from '../../assets/logo/Logo-brainflix.svg';
+import plusIcon from '../../assets/icons/SVG/Icon-upload.svg';
+
+import './styles.scss';
 
 class Header extends React.Component {
 

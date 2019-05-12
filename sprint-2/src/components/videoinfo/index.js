@@ -34,7 +34,7 @@ class VideoInfo extends React.Component {
         return (
             <div className="padding-sides videoinfo-container">
                 <div className="info-and-comments">
-                    <div className="video-info__container padding-sides">
+                    <div className="video-info__container">
                         <h1 className = "video-info__head h1-header">{title}</h1>
                         <div className="video-info__general-info-container">
                             <div className="video-info__channel-date">
