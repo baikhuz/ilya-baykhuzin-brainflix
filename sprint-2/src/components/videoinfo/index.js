@@ -1,22 +1,12 @@
 import React from 'react';
 import './styles.scss';
 import MainVideoComments from '../mainvideocomments';
+import TimeAgo from 'react-timeago';
 
 class VideoInfo extends React.Component {
 
     state = {
         currentVideo: {}
-    }
-
-    convertTimestamp = (timestamp) => {
-
-        timestamp = new Date(timestamp);
-        let mm = timestamp.getMonth() +1;
-        let dd = timestamp.getDate();
-        let yyyy = timestamp.getFullYear();
-
-        timestamp = `${mm}/${dd}/${yyyy}`;
-        return timestamp;
     }
 
     componentWillReceiveProps (newProps) {
@@ -49,7 +39,7 @@ class VideoInfo extends React.Component {
                         <div className="video-info__general-info-container">
                             <div className="video-info__channel-date">
                                 <h2 className="video-info__channel-date h3-subheader">By {channel}</h2>
-                                <h5 className="video-info__channel-date para">{this.convertTimestamp(timestamp)}</h5>
+                                <h5 className="video-info__channel-date para"><TimeAgo date = {timestamp} /></h5>
                             </div>
                             <div className="video-info__view-likes">
                                 <div className="video-info__view-likes--views">

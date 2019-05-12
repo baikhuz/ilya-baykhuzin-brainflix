@@ -1,5 +1,6 @@
 import React from 'react';
 import './styles.scss';
+import TimeAgo from 'react-timeago';
 
 class CommentList extends React.Component {
 
@@ -15,7 +16,7 @@ class CommentList extends React.Component {
                         <div className="comment__content">
                             <div className="comment__name-date">
                                 <h3 className="comment__name-date--name commenter-name" id = "comm-name-bold">{item.name}</h3>
-                                <p className="comment__name-date--date label">{item.timestamp}</p>
+                                <p className="comment__name-date--date label"><TimeAgo date = {item.timestamp} /></p>
                             </div>
                             <div className="comment__comment para">{item.comment}</div>
                         </div>
