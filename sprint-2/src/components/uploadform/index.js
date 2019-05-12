@@ -15,7 +15,6 @@ class UploadForm extends React.Component {
                     <h5 className="upload-form__thumbnail--label label">Video Thumbnail</h5>
                     <img src={this.state.thumbnail} alt="thimbnail" className="upload-form__thumbnail--image"/>
                 </div>
-                
             </>
         )
     }

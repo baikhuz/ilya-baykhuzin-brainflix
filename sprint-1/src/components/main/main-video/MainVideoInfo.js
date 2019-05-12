@@ -2,19 +2,22 @@ import React, { Component } from 'react';
 import '../../../styles/main-video-info.scss';
 import MainVideoComments from './main-video-comments/MainVideoComments';
 import SideVids from '../side-vids/SideVids';
+import TimeAgo from 'react-timeago';
 
 class MainVideoInfo extends Component {
     
-    convertTimestamp = (timestamp) => {
+    // convertTimestamp = (timestamp) => {
 
-        timestamp = new Date(timestamp);
-        let mm = timestamp.getMonth() +1;
-        let dd = timestamp.getDate();
-        let yyyy = timestamp.getFullYear();
+    //     timestamp = new Date(timestamp);
+    //     let mm = timestamp.getMonth() +1;
+    //     let dd = timestamp.getDate();
+    //     let yyyy = timestamp.getFullYear();
 
-        timestamp = `${mm}/${dd}/${yyyy}`;
-        return timestamp;
-    }
+    //     timestamp = `${mm}/${dd}/${yyyy}`;
+    //     return timestamp;
+    // }
+
+    // {this.convertTimestamp(this.props.timestamp)}
     
     render () {
         return (
@@ -25,7 +28,7 @@ class MainVideoInfo extends Component {
                         <div className="video-info__general-info-container">
                             <div className="video-info__channel-date">
                                 <h2 className="video-info__channel-date h3-subheader">By {this.props.channel}</h2>
-                                <h5 className="video-info__channel-date para">{this.convertTimestamp(this.props.timestamp)}</h5>
+                                <h5 className="video-info__channel-date para"><TimeAgo date = {this.props.timestamp} /></h5>
                             </div>
                             <div className="video-info__view-likes">
                                 <div className="video-info__view-likes--views">
