@@ -1,0 +1,136 @@
+@import '../../styles/master';
+
+.upload-form {
+    @include padding-sides;
+
+    @include desktop {
+        padding-left: 11.25rem;
+        padding-right: 11.25rem;
+    }
+
+    &__header {
+        margin-top: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    &__thumbnail {
+        width: 100%;
+
+        @include desktop {
+            width: auto;
+        }
+        
+        &--label {
+            margin-bottom: 0;
+        }
+
+        &--image {
+            width: inherit;
+            max-width: 21.5rem;
+            border-radius: 4px;
+        }
+    }
+
+    &__inputs {
+        display: flex;
+        flex-direction: column;
+
+        @include desktop {
+            margin-left: 1.5rem;
+            width: 100%;
+        }
+
+        &--label-title {
+            margin-top: 2rem;
+            margin-bottom: 0;
+
+            @include desktop {
+                margin-top: 20.040px;
+            }
+        }
+
+        &--label-description {
+            margin-top: 1.5rem;
+            margin-bottom: 0;
+
+            @include desktop {
+                margin-bottom: 3px;
+            }
+        }
+
+        &--vidTitle {
+            @include input-box;
+        }
+
+        &--vidDescription {
+            @include input-box;
+            height: 8.9375rem;
+            resize: none;
+
+            @include tablet {
+                margin-bottom: 2.5rem;
+            }
+
+            @include desktop {
+                height: 5.875rem;
+            }
+        }
+    }
+
+    &__buttons {
+        padding-top: 2rem;
+        display: flex;
+        flex-direction: column;
+
+        @include tablet {
+            padding-top: 2.5rem;
+            flex-direction: row-reverse;
+        }
+
+        &--publish {
+            @include cta-button;
+
+            @include tablet {
+                width: 10rem;
+                margin-left: 3rem;
+            }
+        }
+
+        &--cancel {
+            @include cta-button;
+            background: $color-white;
+            color: $color-brainflix-blue;
+
+            @include tablet {
+                padding: 0;
+            }
+        }
+    }
+}
+
+.uploads-navbar-divider {
+    width: 100vw;
+    border-bottom: 1px solid $color-mercury;
+}
+
+.divider-line-uploads {
+    display: none;
+
+    @include tablet {
+        display: block;
+        border-bottom: 1px solid $color-mercury;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+    @include desktop {
+        padding-left: 11.25rem;
+        padding-right: 11.25rem;
+    }
+}
+
+.thumbnail-and-inputs {
+    @include desktop {
+        display: flex;
+    }
+}

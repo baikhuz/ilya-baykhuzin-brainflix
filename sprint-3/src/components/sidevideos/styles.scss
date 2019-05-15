@@ -1,0 +1,46 @@
+@import '../../styles/master';
+
+.side-vid {
+    display: flex;
+    margin-bottom: 1.5rem;
+
+    @include tablet {
+        width: 21.75rem;
+    }
+
+    @include desktop {
+        padding-bottom: .38rem;
+    }
+
+    &__label {
+        padding-top: 1.75rem;
+        padding-bottom: 1.75rem;
+    }
+
+    &__poster {
+        width: 7.5rem;
+        height: 4.375rem;
+        border-radius: 4px;
+    }
+
+    &__info {
+        width: 60%;
+        margin-left: 1rem;
+
+        & > a {
+            color: $color-black;
+            text-decoration: none;
+        }
+
+        &--title {
+            margin-top: 4px;
+            margin-bottom: 4px;
+            font-family: $font-stack-demi;
+        }
+
+        &--channel {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+    }
+}
