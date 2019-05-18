@@ -6,9 +6,9 @@ import {
   Route,
   Redirect } from 'react-router-dom';
 
-import Navbar from '../components/navbar';
-import Videos from '../pages/videos';
-import Upload from '../pages/upload';
+import Navbar from '../components/Navbar/Navbar';
+import Videos from '../pages/Videos/Videos';
+import Upload from '../pages/Upload/Upload';
 
 class App extends React.Component {
 

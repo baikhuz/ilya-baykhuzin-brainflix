@@ -6,7 +6,7 @@ import plusIcon from '../../assets/icons/SVG/Icon-upload.svg';
 
 import './styles.scss';
 
-class Header extends React.Component {
+class Navbar extends React.Component {
 
     clickHandler = (e) => {
         e.preventDefault();
@@ -37,4 +37,4 @@ class Header extends React.Component {
     }
 }
 
-export default Header;
+export default Navbar;

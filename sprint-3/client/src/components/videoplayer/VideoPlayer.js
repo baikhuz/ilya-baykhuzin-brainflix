@@ -1,13 +1,11 @@
 import React from 'react';
 import axios from 'axios';
 
-import VideoInfo from '../videoinfo';
-import SideVideos from '../../components/sidevideos';
+import VideoInfo from '../VideoInfo/VideoInfo';
+import SideVideos from '../SideVideos/SideVideos';
 
 import './styles.scss';
-
-import {apiLinkVids, apiKey} from '../../pages/videos';
-
+import {apiLinkVids, apiKey} from '../../apiLinks';
 
 class VideoPlayer extends React.Component {
 
@@ -34,7 +32,6 @@ class VideoPlayer extends React.Component {
                         </video> 
                     : null }
                     <div className="controls">
-                        {/* <div className="controls-container"> */}
                             <div className="controls__play-pause">
                                 <button className="controls__play-pause--button"></button>
                             </div>
@@ -49,7 +46,6 @@ class VideoPlayer extends React.Component {
                                 <button className="controls__size-volume--volume--button"></button>
                                 </div>
                             </div>
-                        {/* </div> */}
                     </div>
                 </div>
                 <div className="vid-info">

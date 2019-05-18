@@ -1,6 +1,7 @@
 import React from 'react';
-import CommentList from '../commentlist';
-import CommentForm from '../commentform';
+
+import CommentList from '../CommentList/CommentList';
+import CommentForm from '../CommentForm/CommentForm';
 
 class MainVideoComments extends React.Component {
 

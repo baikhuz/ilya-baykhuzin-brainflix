@@ -1,7 +1,8 @@
 import React from 'react';
-import './styles.scss';
-import MainVideoComments from '../mainvideocomments';
 import TimeAgo from 'react-timeago';
+
+import MainVideoComments from '../MainVideoComments/MainVideoComments';
+import './styles.scss';
 
 class VideoInfo extends React.Component {
 
