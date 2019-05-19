@@ -1,19 +1,38 @@
 import React from 'react';
 import './styles.scss';
+import axios from 'axios';
 
-// require('../../assets/images/Upload-video-preview.jpg')
+import {apiLinkVids} from '../../apiLinks';
 
 class UploadForm extends React.Component {
 
     state = {
-        thumbnail: '',
         title: '',
+        channel: '',
+        image: '',
         description: '',
     }
 
     handleSubmit = (e) => {
         e.preventDefault();
-        console.log(this.state);
+
+        axios
+            .post(`${apiLinkVids}`, {
+                title: this.state.title,
+                channel: this.state.channel,
+                image: this.state.image,
+                description: this.state.description,
+            })
+            .then(response => {
+                console.log(response.data)
+            })
+            .catch(error => {console.log(error)})
+
+        this.refs.titleRef.value="";
+        this.refs.channelRef.value="";
+        this.refs.imageRef.value="";
+        this.refs.descriptionRef.value="";
+
     }
 
     handleChange = (e) => {
@@ -38,21 +57,13 @@ class UploadForm extends React.Component {
                             <div className="upload-form__thumbnail">
                                 <h5 className="upload-form__thumbnail--label label">Video Thumbnail</h5>
                                 <div className="thumbnail__container">
-                                    <img ref="thumbnailImg" className="hidden" src={this.state.thumbnail} alt="thumbnail"/>
+                                    <img ref="thumbnailImg" className="hidden" src={this.state.image} alt="thumbnail"/>
                                 </div>
                             </div>
                             <div className="upload-form__inputs">
-                                <h5 className="upload-form__inputs--label-title label">Upload your Video Thumbnail</h5>
-                                <input 
-                                    value={this.state.thumbnail} 
-                                    onChange={e => {this.handleChange(e); this.picChange(e) } }
-                                    className="upload-form__inputs--vidTitle" 
-                                    placeholder="Insert a link to a picture (i.e. https://source.unsplash.com/random)" 
-                                    required 
-                                    name="thumbnail" 
-                                    type="text"/>
                                 <h5 className="upload-form__inputs--label-title label">Title Your Video</h5>
                                 <input 
+                                    ref="titleRef"
                                     value={this.state.title} 
                                     onChange={e => this.handleChange(e)}
                                     className="upload-form__inputs--vidTitle" 
@@ -60,8 +71,29 @@ class UploadForm extends React.Component {
                                     required 
                                     name="title" 
                                     type="text"/>
+                                <h5 className="upload-form__inputs--label-title label">Write your channel's display name</h5>
+                                <input 
+                                    ref="channelRef"
+                                    value={this.state.channel} 
+                                    onChange={e => this.handleChange(e)}
+                                    className="upload-form__inputs--vidTitle" 
+                                    placeholder="Type in your channel name" 
+                                    required 
+                                    name="channel" 
+                                    type="text"/>
+                                <h5 className="upload-form__inputs--label-title label">Upload your Video Thumbnail</h5>
+                                <input 
+                                    ref="imageRef"
+                                    value={this.state.image} 
+                                    onChange={e => {this.handleChange(e); this.picChange(e) } }
+                                    className="upload-form__inputs--vidTitle" 
+                                    placeholder="Insert a link to a picture (i.e. https://source.unsplash.com/random)" 
+                                    required 
+                                    name="image" 
+                                    type="text"/>
                                 <h5 className="upload-form__inputs--label-description label">Add a Video Description</h5>
                                 <textarea 
+                                    ref="descriptionRef"
                                     value={this.state.description}
                                     onChange={e => this.handleChange(e)}
                                     className="upload-form__inputs--vidDescription" 

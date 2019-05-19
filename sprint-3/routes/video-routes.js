@@ -27,14 +27,14 @@ const getSingleVideo = (req,res) => {
 
 const createNewVideo = (req, res) => {
     const {
-        title, channel, description
+        title, channel, image, description
     } = req.body;
 
     const newVideo = {
         id: shortId.generate(),
         title,
         channel,
-        image: "https://source.unsplash.com/random",
+        image,
         description,
         views: 0,
         likes: 0,
