@@ -52,13 +52,11 @@
 
             &--button {
                 background: url('../../assets/icons/SVG/Icon-play.svg');
-                @include vid-button-formats;
-                cursor: pointer;
+                @include play-pause-button;
 
                 &--active {
                     background: url('../../assets/icons/SVG/Icon-pause.svg');
-                    @include vid-button-formats;
-                    cursor: pointer;
+                    @include play-pause-button;
                 }
             }
         }

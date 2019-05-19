@@ -127,3 +127,9 @@
     background-position: center;
     border: 0;
 }
+
+@mixin play-pause-button {
+    @include vid-button-formats;
+    cursor: pointer;
+    outline: none;
+}
