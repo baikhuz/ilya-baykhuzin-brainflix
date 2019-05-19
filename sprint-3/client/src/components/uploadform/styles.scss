@@ -23,12 +23,6 @@
         &--label {
             margin-bottom: 0;
         }
-
-        &--image {
-            width: inherit;
-            max-width: 21.5rem;
-            border-radius: 4px;
-        }
     }
 
     &__inputs {
@@ -89,6 +83,8 @@
 
         &--publish {
             @include cta-button;
+            cursor: pointer;
+            outline: none;
 
             @include tablet {
                 width: 10rem;
@@ -98,6 +94,8 @@
 
         &--cancel {
             @include cta-button;
+            cursor: pointer;
+            outline: none;
             background: $color-white;
             color: $color-brainflix-blue;
 
@@ -133,4 +131,31 @@
     @include desktop {
         display: flex;
     }
+}
+
+.thumbnail__container {
+    height: 9.5625rem;
+    width: 18rem;
+    border-radius: 4px;
+    background-color: $color-mercury;
+    background-image: url('../../assets/icons/SVG/Icon-views.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 7rem;
+
+    @include tablet {
+        height: 11.4375rem;
+        width: 21.5rem;
+    }
+
+    &--image {
+        height: inherit;
+        width: inherit;
+        border-radius: inherit;
+        object-fit: cover;
+    }
+}
+
+.hidden {
+    display: none;
 }
