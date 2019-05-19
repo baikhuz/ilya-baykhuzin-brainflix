@@ -6,19 +6,9 @@ import './styles.scss';
 
 class VideoInfo extends React.Component {
 
-    state = {
-        currentVideo: {}
+    shouldComponentUpdate (nextProps) {
+        return nextProps.currentVideo !== this.props.currentVideo
     }
-
-    componentWillReceiveProps (newProps) {
-        if (newProps.currentVideo && Object.keys(newProps.currentVideo).length > 0)
-            this.setState({currentVideo: newProps.currentVideo})
-    }
-
-    // ^^ this conditional checks whether 
-    // (a) the .currentVideo props were received and
-    // (b) there is at least 1 key-value pair inside the props object. this prevents
-    // passing props down to children twice
     
     render () {
 
@@ -30,7 +20,7 @@ class VideoInfo extends React.Component {
             title,  
             views,
             comments
-        } = this.state.currentVideo
+        } = this.props.currentVideo
 
         return (
             <div className="padding-sides videoinfo-container">

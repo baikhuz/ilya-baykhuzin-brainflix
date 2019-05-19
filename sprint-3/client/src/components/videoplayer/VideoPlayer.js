@@ -21,19 +21,29 @@ class VideoPlayer extends React.Component {
                 .catch(error => {console.log(error)})
         }
     }
-    
+
+    playVideo = () => {
+        if(this.refs.mainVid.paused) {
+            this.refs.mainVid.play();
+            this.refs.playbtn.className="controls__play-pause--button--active";
+        } else {
+            this.refs.mainVid.pause()
+            this.refs.playbtn.className="controls__play-pause--button";
+        }
+    }
+
     render () {
         return (
             <>
                 <div className = "main-video__container">
                     { this.state.video ? 
-                        <video className = "main-video" poster = {this.state.image} >
+                        <video ref="mainVid" className = "main-video" poster = {this.state.image} >
                             <source src = {this.state.video + apiKey} type = "video/mp4"/>
                         </video> 
                     : null }
                     <div className="controls">
                             <div className="controls__play-pause">
-                                <button className="controls__play-pause--button"></button>
+                                <button ref="playbtn" onClick={this.playVideo} className="controls__play-pause--button"></button>
                             </div>
                             <div className="controls__scrubber">
                                 <div className="controls__scrubber--line"></div>
