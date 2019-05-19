@@ -5,7 +5,7 @@ import VideoInfo from '../VideoInfo/VideoInfo';
 import SideVideos from '../SideVideos/SideVideos';
 
 import './styles.scss';
-import {apiLinkVids, apiKey} from '../../apiLinks';
+import {apiLinkVids} from '../../apiLinks';
 
 class VideoPlayer extends React.Component {
 
@@ -16,7 +16,7 @@ class VideoPlayer extends React.Component {
 
         if (id !== this.state.id) {
             axios
-                .get(`${apiLinkVids}${id}${apiKey}`)
+                .get(`${apiLinkVids}${id}`)
                 .then(response => {this.setState (response.data)})
                 .catch(error => {console.log(error)})
         }
@@ -38,7 +38,7 @@ class VideoPlayer extends React.Component {
                 <div className = "main-video__container">
                     { this.state.video ? 
                         <video ref="mainVid" className = "main-video" poster = {this.state.image} >
-                            <source src = {this.state.video + apiKey} type = "video/mp4"/>
+                            <source src = {this.state.video} type = "video/mp4"/>
                         </video> 
                     : null }
                     <div className="controls">

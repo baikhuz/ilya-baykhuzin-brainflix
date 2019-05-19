@@ -8,7 +8,7 @@ const videos = [
         "views": "1,001,023",
         "likes": "110,985",
         "duration": "4:01",
-        "video": "https://project-2-api.herokuapp.com/stream",
+        "video": "http://localhost:5000/video.mp4",
         "timestamp": 1545162149000,
         "comments": [
             {
@@ -43,7 +43,7 @@ const videos = [
         "views": "2,043,765",
         "likes": "400,058",
         "duration": "7:26",
-        "video": "https://project-2-api.herokuapp.com/stream",
+        "video": "http://localhost:5000/video.mp4",
         "timestamp": 1537003624000,
         "comments": [
             {
@@ -78,7 +78,7 @@ const videos = [
         "views": "16,950",
         "likes": "3,856",
         "duration": "4:13",
-        "video": "https://project-2-api.herokuapp.com/stream",
+        "video": "http://localhost:5000/video.mp4",
         "timestamp": 1534234842000,
         "comments": [
             {
@@ -113,7 +113,7 @@ const videos = [
         "views": "739,945",
         "likes": "98,352",
         "duration": "8:34",
-        "video": "https://project-2-api.herokuapp.com/stream",
+        "video": "http://localhost:5000/video.mp4",
         "timestamp": 1536070744000,
         "comments": [
             {
@@ -148,7 +148,7 @@ const videos = [
         "views": "72,342",
         "likes": "8,785",
         "duration": "2:59",
-        "video": "https://project-2-api.herokuapp.com/stream",
+        "video": "http://localhost:5000/video.mp4",
         "timestamp": 1518625200000,
         "comments": [
             {
@@ -183,7 +183,7 @@ const videos = [
         "views": "345,987",
         "likes": "76,588",
         "duration": "12:26",
-        "video": "https://project-2-api.herokuapp.com/stream",
+        "video": "http://localhost:5000/video.mp4",
         "timestamp": 1545377524000,
         "comments": [
             {
@@ -218,7 +218,7 @@ const videos = [
         "views": "252,796",
         "likes": "4,905",
         "duration": "7:31",
-        "video": "https://project-2-api.herokuapp.com/stream",
+        "video": "http://localhost:5000/video.mp4",
         "timestamp": 1520167535028,
         "comments": [
             {
@@ -253,7 +253,7 @@ const videos = [
         "views": "29,984",
         "likes": "2,552",
         "duration": "5:58",
-        "video": "https://project-2-api.herokuapp.com/stream",
+        "video": "http://localhost:5000/video.mp4",
         "timestamp": 1538006507000,
         "comments": [
             {
@@ -288,7 +288,7 @@ const videos = [
         "views": "3,092,284",
         "likes": "75,985",
         "duration": "4:20",
-        "video": "https://project-2-api.herokuapp.com/stream",
+        "video": "http://localhost:5000/video.mp4",
         "timestamp": 1531007012000,
         "comments": [
             {

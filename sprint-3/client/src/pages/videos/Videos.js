@@ -4,7 +4,7 @@ import axios from 'axios';
 import VideoPlayer from '../../components/VideoPlayer/VideoPlayer';
 
 import './styles.scss';
-import {apiLinkVids, apiKey} from '../../apiLinks.js';
+import {apiLinkVids} from '../../apiLinks.js';
 
 class Videos extends React.Component {
 
@@ -12,7 +12,7 @@ class Videos extends React.Component {
 
     componentDidMount () {
         axios
-            .get(`${apiLinkVids}${apiKey}`)
+            .get(`${apiLinkVids}`)
             .then(response => {this.setState({videos: response.data}); })
             .catch(error => {console.log(error)});
     }
